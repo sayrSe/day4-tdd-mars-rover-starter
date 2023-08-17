@@ -2,7 +2,7 @@ package com.afs.tdd;
 
 public class MarsRover {
 
-    private Location location;
+    private final Location location;
 
     public MarsRover(Location location) {
         this.location = location;
