@@ -1,7 +1,8 @@
 package com.afs.tdd;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MarsRoverTest {
     @Test
@@ -14,9 +15,9 @@ class MarsRoverTest {
         marsRover.executeCommand(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
-        Assertions.assertEquals(0 , currentLocation.getX());
-        Assertions.assertEquals(1 , currentLocation.getY());
-        Assertions.assertEquals(Direction.NORTH , currentLocation.getDirection());
+        assertEquals(0 , currentLocation.getX());
+        assertEquals(1 , currentLocation.getY());
+        assertEquals(Direction.NORTH , currentLocation.getDirection());
     }
 
     @Test
@@ -29,9 +30,9 @@ class MarsRoverTest {
         marsRover.executeCommand(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
-        Assertions.assertEquals(0 , currentLocation.getX());
-        Assertions.assertEquals(0 , currentLocation.getY());
-        Assertions.assertEquals(Direction.WEST , currentLocation.getDirection());
+        assertEquals(0 , currentLocation.getX());
+        assertEquals(0 , currentLocation.getY());
+        assertEquals(Direction.WEST , currentLocation.getDirection());
     }
 
     @Test
@@ -44,9 +45,9 @@ class MarsRoverTest {
         marsRover.executeCommand(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
-        Assertions.assertEquals(0 , currentLocation.getX());
-        Assertions.assertEquals(0 , currentLocation.getY());
-        Assertions.assertEquals(Direction.EAST , currentLocation.getDirection());
+        assertEquals(0 , currentLocation.getX());
+        assertEquals(0 , currentLocation.getY());
+        assertEquals(Direction.EAST , currentLocation.getDirection());
     }
 
     @Test
@@ -59,8 +60,8 @@ class MarsRoverTest {
         marsRover.executeCommand(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
-        Assertions.assertEquals(0 , currentLocation.getX());
-        Assertions.assertEquals(-1 , currentLocation.getY());
-        Assertions.assertEquals(Direction.SOUTH , currentLocation.getDirection());
+        assertEquals(0 , currentLocation.getX());
+        assertEquals(-1 , currentLocation.getY());
+        assertEquals(Direction.SOUTH , currentLocation.getDirection());
     }
 }
