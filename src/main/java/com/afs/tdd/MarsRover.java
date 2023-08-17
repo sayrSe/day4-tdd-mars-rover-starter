@@ -11,7 +11,7 @@ public class MarsRover {
     }
 
     public void executeBatchCommands(List<Command> givenCommands) {
-        for (Command givenCommand : givenCommands) {
+        givenCommands.forEach(givenCommand -> {
             if (givenCommand == Command.MOVE) {
                 move();
             } else if (givenCommand == Command.TURN_LEFT) {
@@ -19,7 +19,7 @@ public class MarsRover {
             } else if (givenCommand == Command.TURN_RIGHT) {
                 turnRight();
             }
-        }
+        });
     }
 
     private void move() {
