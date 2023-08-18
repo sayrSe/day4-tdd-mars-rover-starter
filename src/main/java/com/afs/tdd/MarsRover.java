@@ -59,6 +59,6 @@ public class MarsRover {
     }
 
     public Location getCurrentLocation() {
-        return location;
+        return new Location(location.getX(), location.getY(), location.getDirection());
     }
 }
